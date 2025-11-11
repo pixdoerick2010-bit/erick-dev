@@ -1,0 +1,215 @@
+/* Variáveis para o Tema */
+:root {
+    --color-dark-bg: #121212; /* Fundo principal escuro */
+    --color-card-bg: #1e1e1e; /* Fundo dos cards (seções) */
+    --color-text-light: #e0e0e0; /* Cor do texto claro */
+    --color-text-muted: #a0a0a0; /* Cor do texto secundário */
+    --color-highlight-blue: #007bff; /* Azul de destaque (primário) */
+    --color-hover-blue: #0056b3; /* Azul para hover */
+    --color-whatsapp: #25D366; /* Cor do WhatsApp */
+    --color-linkedin: #0A66C2; /* Cor do LinkedIn */
+}
+
+/* Base e Tipografia */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-dark-bg);
+    color: var(--color-text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--color-highlight-blue);
+    margin-top: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--color-highlight-blue);
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h2 i {
+    margin-right: 10px;
+    color: var(--color-highlight-blue);
+}
+
+/* Header (Topo) */
+header {
+    background-color: var(--color-card-bg);
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+.title-subtext {
+    color: var(--color-text-muted);
+    font-size: 1.1em;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 0.9em;
+    color: var(--color-text-muted);
+    margin-bottom: 25px;
+}
+
+.contact-info i {
+    color: var(--color-highlight-blue);
+    margin-right: 5px;
+}
+
+/* Seções (Cards) */
+.card {
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-left: 5px solid var(--color-highlight-blue); /* Destaque lateral */
+}
+
+/* Experiência e Formação (Itens) */
+.item-block {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 3px solid var(--color-text-muted);
+}
+
+.item-block h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+    color: var(--color-text-light); /* Títulos de item em cor clara */
+}
+
+.item-block p {
+    margin: 5px 0;
+}
+
+.date, .location {
+    font-size: 0.9em;
+    color: var(--color-text-muted);
+    display: block;
+}
+
+.blue-text {
+    color: var(--color-highlight-blue);
+    font-weight: bold;
+}
+
+/* Habilidades e Idiomas */
+.skills-list, .language-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas automáticas */
+    gap: 15px;
+}
+
+.skills-list li, .language-list li {
+    background-color: rgba(0, 123, 255, 0.1); /* Fundo sutil para itens */
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.skills-list li:hover, .language-list li:hover {
+    background-color: rgba(0, 123, 255, 0.2);
+}
+
+/* Botões Sociais */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+.btn-linkedin {
+    background-color: var(--color-linkedin);
+}
+
+.btn-linkedin:hover {
+    background-color: #004c8f;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: var(--color-whatsapp);
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--color-card-bg);
+    color: var(--color-text-muted);
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+/* Responsividade Básica */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    .contact-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .skills-list, .language-list {
+        grid-template-columns: 1fr;
+    }
+}
